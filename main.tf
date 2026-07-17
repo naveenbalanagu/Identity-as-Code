@@ -28,7 +28,7 @@ resource "okta_group" "productowners" {
 resource "okta_app_oauth" "custom_portal" {
   label          = "Internal App"
   type           = "web"
-  grant_type     = ["authorization_code"]
+  grant_types     = ["authorization_code"]
   redirect_uris  = ["https://localhost:8080/login/callback"]
   response_types = ["code"]
 }
