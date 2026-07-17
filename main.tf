@@ -36,6 +36,6 @@ resource "okta_app_oauth" "custom_portal" {
 # Assign group to okta application
 
 resource "okta_app_group_assignment" "eng_portal_access" {
-  app_id   = okta_app_oauth.custom_portal.app_id
+  app_id   = okta_app_oauth.custom_portal.id
   group_id = okta_group.engineering.id
 }
